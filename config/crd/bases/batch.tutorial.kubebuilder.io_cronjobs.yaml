@@ -833,6 +833,8 @@ spec:
                                             type: string
                                           protocol:
                                             description: Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
+                                            # workaround for https://github.com/kubernetes-sigs/kubebuilder/issues/1466
+                                            default: TCP
                                             type: string
                                         required:
                                         - containerPort
@@ -2351,6 +2353,8 @@ spec:
                                             type: string
                                           protocol:
                                             description: Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".
+                                            # workaround for https://github.com/kubernetes-sigs/kubebuilder/issues/1466
+                                            default: TCP
                                             type: string
                                         required:
                                         - containerPort
